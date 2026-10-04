@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Consulta Confidencial | Inanitas Abogados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logosinfondosge.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logosinfondosge.png" alt="Logo Inanitas Abogados" class="logo-img">
+            <span>INANITAS ABOGADOS</span>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bufete.html">El Bufete</a></li>
+                <li><a href="practica.html">Áreas de Práctica</a></li>
+                <li><a href="contacto.html" class="btn-contacto" style="background-color: var(--accent-gold); color: var(--bg-color);">Consulta Confidencial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contacto-section">
+        <div class="container-small">
+            <div class="section-header">
+                <h2>Evaluación de Viabilidad</h2>
+                <hr class="separator">
+                <p class="intro-text">Toda la información proporcionada está estrictamente amparada por el secreto profesional.</p>
+            </div>
+
+            <div class="form-container" id="formulario-bloque">
+                <form id="form-consulta">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Su nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" required placeholder="Sus apellidos">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="provincia">Provincia de Residencia</label>
+                            <select id="provincia" name="provincia" required>
+                                <option value="" disabled selected>Seleccione provincia...</option>
+                                <option value="madrid">Madrid</option>
+                                <option value="barcelona">Barcelona</option>
+                                <option value="valencia">Valencia</option>
+                                <option value="sevilla">Sevilla</option>
+                                <option value="avila">Ávila</option>
+                                <option value="otras">Resto de España</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción de la situación procesal (Máx. 400 caracteres)</label>
+                        <textarea id="descripcion" name="descripcion" rows="5" maxlength="400" required placeholder="Describa brevemente el litigio del que desea desvincularse..."></textarea>
+                        <div class="char-counter">0 / 400</div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">Solicitar Análisis de Clausura</button>
+                </form>
+            </div>
+
+            <div class="exito-container" id="mensaje-exito" style="display: none;">
+                <div class="icono-exito">⚖️</div>
+                <h3>Solicitud Recibida Correctamente</h3>
+                <p>Su expediente ha sido asignado a nuestro equipo procesal. Analizaremos la viabilidad de la renuncia y le contactaremos en un plazo máximo de 24 horas laborables.</p>
+                <a href="index.html" class="btn-contacto" style="margin-top: 20px; display: inline-block;">Volver al Inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Inanitas Clausura Estratégica S.L.P.</h3>
+            <p>Paseo de la Castellana, Madrid | Operativa a nivel nacional</p>
+            <p class="legales">&copy; 2026 Inanitas Abogados. Aviso Legal y Política de Privacidad.</p>
+        </div>
+    </footer>
+
+    <script>
+        const textarea = document.getElementById('descripcion');
+        const counter = document.querySelector('.char-counter');
+        textarea.addEventListener('input', function() {
+            counter.textContent = `${this.value.length} / 400`;
+        });
+
+        document.getElementById('form-consulta').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            document.getElementById('formulario-bloque').style.display = 'none';
+            document.getElementById('mensaje-exito').style.display = 'block';
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navMenu.classList.toggle('activo');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

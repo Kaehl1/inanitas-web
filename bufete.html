@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>El Bufete | Inanitas Abogados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logosinfondosge.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logosinfondosge.png" alt="Logo Inanitas Abogados" class="logo-img">
+            <span>INANITAS ABOGADOS</span>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bufete.html">El Bufete</a></li>
+                <li><a href="practica.html">Áreas de Práctica</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Consulta Confidencial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bufete-section">
+        <div class="container-large">
+            <div class="section-header">
+                <h2>El Bufete</h2>
+                <hr class="separator">
+                <p class="intro-text">Profesionalizamos la renuncia para garantizar su tranquilidad financiera y procesal.</p>
+            </div>
+
+            <div class="historia-container">
+                <div class="historia-texto">
+                    <h3>Nuestra Historia</h3>
+                    <p>Inanitas Abogados nace tras años de observar una anomalía en el sistema judicial: clientes particulares y pymes desangrándose en provisiones de fondos por la obsesión de la abogacía tradicional de "pelear hasta el último recurso".</p>
+                    <p>Detectamos un vacío legal y de mercado. Nadie ofrecía un servicio profesional de salida limpia. Así, decidimos fundar el primer despacho de España dedicado exclusivamente a la claudicación técnica, convirtiendo la derrota judicial en una herramienta de alivio, ahorro y certidumbre.</p>
+                </div>
+            </div>
+
+            <div class="valores-grid">
+                <div class="card-valor">
+                    <h4>Misión</h4>
+                    <p>Liberar a personas y empresas de litigios tóxicos y cargas patrimoniales insostenibles mediante derrotas procesales controladas y sin costas.</p>
+                </div>
+                <div class="card-valor">
+                    <h4>Visión</h4>
+                    <p>Ser el referente nacional indiscutible en gestión de desestimientos, allanamientos estratégicos y disolución de conflictos irresolubles.</p>
+                </div>
+                <div class="card-valor">
+                    <h4>Valores</h4>
+                    <ul class="lista-minimalista">
+                        <li><strong>Discreción pragmática:</strong> Cierre sin ruido mediático.</li>
+                        <li><strong>Rigor deontológico:</strong> Legalidad procesal estricta.</li>
+                        <li><strong>Eficiencia temporal:</strong> Su paz mental por encima del ego del abogado.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="competitiva-equipo-grid">
+                <div class="ventaja-caja">
+                    <h3>Nuestra Ventaja Competitiva</h3>
+                    <ul class="lista-check">
+                        <li><strong>Certeza absoluta:</strong> 0 victorias. 100% de expedientes cerrados de raíz.</li>
+                        <li><strong>Inmunidad en costas:</strong> Dominio del art. 395 LEC para allanamientos sin sanción.</li>
+                        <li><strong>Tarifa plana:</strong> Precios cerrados por escrito desde 1.000 €. Sin provisiones sorpresa.</li>
+                        <li><strong>Garantía inversa:</strong> Devolución del 100% si el juez dicta sentencia favorable por error.</li>
+                    </ul>
+                </div>
+                
+                <div class="equipo-caja">
+                    <h3>Dirección y Sede</h3>
+                    <div class="perfil-director">
+                        <p><strong>Brian Velarde Corredor</strong></p>
+                        <p class="cargo">Socio Director y Fundador</p>
+                        <p class="bio">Especialista en Derecho Procesal y arquitecto de estrategias de desvinculación patrimonial y allanamiento corporativo.</p>
+                    </div>
+                    <div class="ubicacion-info">
+                        <p><strong>Sede Institucional:</strong> Paseo de la Castellana, Madrid.</p>
+                        <p><strong>Ámbito de actuación:</strong> Operativa telemática y presencial en todo el territorio nacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h3>Inanitas Clausura Estratégica S.L.P.</h3>
+            <p>Paseo de la Castellana, Madrid | Operativa a nivel nacional</p>
+            <p>contacto@inanitasabogados.es | +34 600 000 000</p>
+            <p class="legales">&copy; 2026 Inanitas Abogados. Aviso Legal y Política de Privacidad.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navMenu.classList.toggle('activo');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Inanitas Abogados | Especialistas en Clausura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logosinfondosge.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logosinfondosge.png" alt="Logo Inanitas Abogados" class="logo-img">
+            <span>INANITAS ABOGADOS</span>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bufete.html">El Bufete</a></li>
+                <li><a href="practica.html">Áreas de Práctica</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Consulta Confidencial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>La certeza jurídica que su tranquilidad necesita</h1>
+            <p>0 victorias. 100% de clientes satisfechos.</p>
+            <p class="subtitle">Desestimientos, allanamientos y clausura definitiva de litigios complejos.</p>
+            <a href="contacto.html" class="btn-primary">Finalice su proceso hoy</a>
+        </div>
+    </section>
+
+    <section id="manifiesto" class="manifiesto-section">
+        <div class="container">
+            <h2>Estrategia en la derrota</h2>
+            <hr class="separator">
+            <p>Todos los despachos compiten por prometer victorias que tardan años en llegar y consumen su patrimonio. En Inanitas Abogados somos la primera firma especializada en garantizar la derrota procesal controlada. Aplicamos un rigor deontológico absoluto para extinguir sus responsabilidades legales, neutralizar costas imprevistas y devolverle el control de su tiempo.</p>
+            <p><strong>Porque a veces, ganar sale infinitamente más caro que una retirada a tiempo.</strong></p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h3>Inanitas Clausura Estratégica S.L.P.</h3>
+            <p>Paseo de la Castellana, Madrid | Operativa a nivel nacional</p>
+            <p>contacto@inanitasabogados.es | +34 600 000 000</p>
+            <p class="legales">&copy; 2026 Inanitas Abogados. Aviso Legal y Política de Privacidad.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navMenu.classList.toggle('activo');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
