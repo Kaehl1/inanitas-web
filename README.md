@@ -53,4 +53,4 @@ El proyecto consta de una arquitectura limpia de *frontend* estático:
 La web está diseñada para ser ligera y alojarse de forma estática. 
 
 * 💻 **Entorno Local:** Puedes clonar el repositorio y visualizarlo directamente abriendo cualquier archivo `.html` en tu navegador, o sirviéndolo a través de la extensión *Live Server* en VS Code.
-* 🌐 **Producción:** El proyecto está configurado para desplegarse de manera automática y continua desde la rama principal (`main`) utilizando **GitHub Pages**.
+* 🌐 **Producción:** El proyecto está configurado para desplegarse de manera automática y continua desde la rama principal (`main`) utilizando **GitHub Pages**. (https://kaehl1.github.io/inanitas-web/index.html)
